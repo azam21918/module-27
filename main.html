@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +8,9 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-
 <body class="bg-slate-800">
     <section class="max-w-md min-h-screen mx-auto bg-gray-200 py-6">
+        <!-- nav sections -->
         <nav class="flex justify-around">
             <img src="assets/Group.png" alt="">
             <div>
@@ -24,14 +23,15 @@
             <h1 class="text-2xl font-bold">🔥 Welcome to Payooo!</h1>
             <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
         </div>
+        <!-- cards  -->
         <div class="cards grid grid-cols-3 gap-2 m-1">
-            <div class="border rounded-md text-center  p-2 ">
+            <div id="add-money-box" class="border cursor-pointer rounded-md text-center  p-2 ">
                 <img class="mx-auto" src="assets/money1.png" alt="">
                 <p>Add Money</p>
             </div>
-            <div class="border p-2 rounded-md text-center ">
+            <div id="cash-out-box" class="border cursor-pointer p-2 rounded-md text-center ">
                 <img class="mx-auto" src="assets/money1.png" alt="">
-                <p>Add Money</p>
+                <p>Cash Out</p>
             </div>
             <div class="border p-2 rounded-md text-center ">
                 <img class="mx-auto" src="assets/money1.png" alt="">
@@ -50,6 +50,8 @@
                 <p>Add Money</p>
             </div>
         </div>
+        <!-- add money section -->
+       <section id="add-money">
         <div>
             <h1 class="text-xl text-center text-cyan-900">Add Money</h1>
             <div class="">
@@ -80,7 +82,48 @@
                 </div>
             </div>
         </div>
+       </section>
+       <!-- cash out section -->
+       <section id="cash-out">
+        <div>
+            <h1 class="text-xl text-center text-cyan-900">Cash Out</h1>
+            <div class="">
+                <div class="hero-content flex-col lg:flex-row-reverse">
+                    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                            <select class="select">
+                                <option selected>Select A Bank</option>
+                                <option value="bikash">Bikash</option>
+                                <option value="nagad">Nagad</option>
+                                <option value="u-pay">U-Pay</option>
+                            </select>
+                            <fieldset class="fieldset">
+                                <label class="fieldset-label">Phone Number</label>
+                                <input value="01817737212" id="account-number" type="number" class="input"
+                                    placeholder="Phone Number" required />
+                                <label class="fieldset-label">PIN</label>
+                                <input value="" type="Pin" id="cashout-pin-number" class="input" placeholder="Pin"
+                                    required />
+                                <label class="fieldset-label">Cash Out</label>
+                                <input value="" type="number" id="cash-out-ammount" class="input" placeholder="Cash Out"
+                                    required />
+                                <div><a class="link link-hover">Forgot password?</a></div>
+                                <button id="btn-cash-out" class="btn btn-neutral mt-4">Cash Out</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </section>
+
     </section>
+
+    <script>
+           
+    </script>
     <script src="js/main.js"></script>
+    <script src="js/togggle.js"></script>
+    <script src="js/cashout.js"></script>
 </body>
 </html>
